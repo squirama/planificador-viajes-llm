@@ -167,4 +167,4 @@ proyecto/
 
 ## 9. Código fuente
 
-Repositorio público: **(se añade el enlace tras la publicación)**.
+Repositorio público: **https://github.com/squirama/planificador-viajes-llm**
