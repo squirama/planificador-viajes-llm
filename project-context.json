@@ -1,0 +1,19 @@
+{
+  "project": "Planificador de viajes con LLM - Caso Práctico Unidad 1 (Generative AI, IEP)",
+  "goal": "Prototipo funcional de un planificador de viajes personalizado usando un LLM (Ollama local o Groq en la nube) con prompting, RAG y control de calidad, para el caso práctico de la Unidad 1 del Máster en IA Aplicada.",
+  "stack": ["Python", "Streamlit", "Ollama (llama3.1:latest)", "Groq (llama-3.3-70b-versatile)", "sentence-transformers (all-MiniLM-L6-v2)", "numpy", "requests"],
+  "current_focus": "Añadido soporte dual Ollama/Groq y publicación en GitHub para que el profesor pueda ver el código y, opcionalmente, una versión desplegada en Streamlit Community Cloud.",
+  "decisions": [
+    "LLM local vía Ollama por defecto (gratis, GPU disponible: RTX 5070 Ti). Groq añadido como alternativa en la nube (gratis con API key) para poder desplegar la app con una URL pública sin depender del PC del usuario.",
+    "Selección de proveedor vía variable de entorno PROVEEDOR ('ollama' u 'groq') en config.py, sin abstracciones de más (un if/else simple en llm_client.py).",
+    "Embeddings del RAG migrados de Ollama a sentence-transformers (modelo all-MiniLM-L6-v2, CPU, en proceso): Groq no ofrece API de embeddings, y de paso se soluciona la lentitud original (antes ~3s por fragmento vía Ollama HTTP, uno a uno; ahora se calculan en batch en segundos).",
+    "Fine-tuning (req. 5) y GAN/RL (req. 6) se documentan en README.md como diseño en vez de implementarse: entrenar un modelo real está fuera de alcance para un caso práctico de unidad.",
+    "El feedback del usuario en la interfaz se reutiliza para regenerar el itinerario, como aproximación real y ligera al RLHF documentado en el req. 6.",
+    "Repositorio de código separado del repo git que existe en C:\\Users\\stive (raíz del usuario, con historial ajeno y permisos rotos): se crea un git init propio dentro de proyecto/, publicado como repo público nuevo en GitHub (cuenta squirama, vía gh CLI ya autenticado)."
+  ],
+  "notes": [
+    "Nivel del usuario: estudiante. Código simple, sin abstracciones innecesarias, comentarios en español en lenguaje llano.",
+    "Modelo Ollama por defecto: llama3.1:latest. Modelo Groq: llama-3.3-70b-versatile. Configurables en config.py.",
+    "No usar el repo git de C:\\Users\\stive para nada de este proyecto."
+  ]
+}
