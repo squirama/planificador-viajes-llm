@@ -3,6 +3,9 @@
 Caso Práctico Unidad 1 — asignatura **Generative AI**, Máster en IA Aplicada (Instituto Europeo de
 Posgrado). Enunciado completo en `../IEP-IAA-GIA_u1.pdf`.
 
+**App desplegada (pruébala directamente):** https://planificador-viajes-llm-fhhwtcwntnxqbvgdtepkvl.streamlit.app/
+**Código fuente:** https://github.com/squirama/planificador-viajes-llm
+
 ## 1. Qué hace este proyecto
 
 Una aplicación web (Streamlit) donde el usuario indica sus preferencias de viaje (destino, duración,
@@ -139,6 +142,8 @@ arranca, descarga el modelo de embeddings de `sentence-transformers` automática
    ```
 4. Desplegar. Streamlit Cloud instala `requirements.txt` automáticamente y la app queda accesible en una
    URL pública tipo `https://tu-app.streamlit.app`.
+
+**App ya desplegada: https://planificador-viajes-llm-fhhwtcwntnxqbvgdtepkvl.streamlit.app/**
 
 ## 7. Estructura de archivos
 
