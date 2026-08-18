@@ -6,7 +6,7 @@ import os
 PROVEEDOR = os.environ.get("PROVEEDOR", "ollama")
 
 MODELO_OLLAMA = "llama3.1:latest"           # modelo local (ya descargado con `ollama pull`)
-MODELO_GROQ = "llama-3.3-70b-versatile"     # modelo servido por Groq (gratis, en la nube)
+MODELO_GROQ = "openai/gpt-oss-120b"         # modelo servido por Groq (gratis, en la nube)
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
 
 OLLAMA_URL = "http://localhost:11434"
